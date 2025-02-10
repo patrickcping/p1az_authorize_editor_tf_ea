@@ -1,0 +1,6 @@
+pingone_authorize_environment_id = "c0******-****-****-****-**********56"
+
+pingone_worker_client_id      = "87******-****-****-****-**********8e"
+pingone_worker_client_secret  = "********************************"
+pingone_worker_environment_id = "3c******-****-****-****-**********74"
+pingone_tenant_region_code    = "AU"
