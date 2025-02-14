@@ -12,3 +12,9 @@ variable "attribute_early_access_parent_id" {
   type        = string
   description = "The name of the attribute that will be used as the parent for the example Terraform resources used in Early Access/UAT."
 }
+
+variable "configuration_prefix" {
+  type        = string
+  description = "The prefix to use for the configuration resources"
+  default     = ""
+}

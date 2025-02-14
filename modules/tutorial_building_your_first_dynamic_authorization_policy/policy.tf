@@ -1,7 +1,7 @@
 resource "pingone_authorize_policy_management_policy" "payment_checks" {
   environment_id = var.pingone_environment_id
-  name           = "Payment checks"
-  description    = "Ref: https://docs.pingidentity.com/pingone/authorization_using_pingone_authorize/p1az_tutorial_adding_and_testing_policies.html"
+  name           = format("%sPayment checks", var.configuration_prefix)
+  description    = "Managed by Terraform. Ref: https://docs.pingidentity.com/pingone/authorization_using_pingone_authorize/p1az_tutorial_adding_and_testing_policies.html"
 
   enabled = true
 
