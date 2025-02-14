@@ -4,7 +4,7 @@ resource "pingone_schema_attribute" "my_attribute" {
 
   name         = "myAttribute"
   display_name = "My Awesome Attribute"
-  description  = "My new awesome attribute, added for the PingOne Authorize Terraform Early Access"
+  description  = "Managed by Terraform. My new awesome attribute, added for the PingOne Authorize Terraform Early Access"
 
   type        = "STRING"
   unique      = false
