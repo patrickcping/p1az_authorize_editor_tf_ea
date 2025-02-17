@@ -1,6 +1,6 @@
 resource "pingone_risk_predictor" "my_awesome_anonymous_network_predictor" {
   environment_id = var.pingone_environment_id
-  name           = "My Awesome Anonymous Network Predictor"
+  name           = format("%sMy Awesome Anonymous Network Predictor", var.configuration_prefix)
   compact_name   = "myAwesomeAnonymousNetworkPredictor"
 
   default = {
@@ -16,7 +16,7 @@ resource "pingone_risk_predictor" "my_awesome_anonymous_network_predictor" {
 
 resource "pingone_risk_predictor" "my_awesome_user_location_predictor" {
   environment_id = var.pingone_environment_id
-  name           = "My Awesome User Location Predictor"
+  name           = format("%sMy Awesome User Location Predictor", var.configuration_prefix)
   compact_name   = "myAwesomeUserLocationPredictor"
 
   default = {
@@ -35,7 +35,7 @@ resource "pingone_risk_predictor" "my_awesome_user_location_predictor" {
 
 resource "pingone_risk_predictor" "my_awesome_geovelocity_anomaly_predictor" {
   environment_id = var.pingone_environment_id
-  name           = "My Awesome Geovelocity Predictor"
+  name           = format("%sMy Awesome Geovelocity Predictor", var.configuration_prefix)
   compact_name   = "myAwesomeGeovelocityPredictor"
 
   default = {
@@ -52,7 +52,7 @@ resource "pingone_risk_predictor" "my_awesome_geovelocity_anomaly_predictor" {
 resource "pingone_risk_policy" "my_awesome_scores_risk_policy" {
   environment_id = var.pingone_environment_id
 
-  name = "My Awesome Scores-based Risk Policy"
+  name = format("%sMy Awesome Scores-based Risk Policy", var.configuration_prefix)
 
   policy_scores = {
     policy_threshold_medium = {
