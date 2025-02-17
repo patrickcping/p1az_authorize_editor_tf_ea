@@ -24,3 +24,19 @@ resource "pingone_authorize_trust_framework_service" "early_access_parent" {
 
   service_type = "NONE"
 }
+
+resource "pingone_authorize_trust_framework_processor" "early_access_parent" {
+  environment_id = var.pingone_authorize_environment_id
+  name           = "Terraform Early Access"
+  description    = "An example processor with no configuration, used as a parent for example Terraform resources used in Early Access/UAT."
+}
+
+resource "pingone_authorize_trust_framework_condition" "early_access_parent" {
+  environment_id = var.pingone_authorize_environment_id
+  name           = "Terraform Early Access"
+  description    = "An example condition with no configuration, used as a parent for example Terraform resources used in Early Access/UAT."
+
+  condition = {
+    type = "EMPTY"
+  }
+}
