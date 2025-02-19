@@ -64,7 +64,7 @@ resource "pingone_authorize_trust_framework_attribute" "protect_risk_evaluation_
     },
   ]
 
-  default_value  = ""
+  default_value = ""
 
   value_type = {
     type = "STRING"
@@ -85,7 +85,7 @@ resource "pingone_authorize_trust_framework_attribute" "protect_risk_evaluation_
     },
   ]
 
-  default_value  = ""
+  default_value = ""
 
   value_type = {
     type = "STRING"
@@ -106,7 +106,7 @@ resource "pingone_authorize_trust_framework_attribute" "protect_risk_evaluation_
     },
   ]
 
-  default_value  = ""
+  default_value = ""
 
   value_type = {
     type = "STRING"
@@ -127,7 +127,7 @@ resource "pingone_authorize_trust_framework_attribute" "protect_risk_evaluation_
     },
   ]
 
-default_value  = ""
+  default_value = ""
 
   value_type = {
     type = "STRING"

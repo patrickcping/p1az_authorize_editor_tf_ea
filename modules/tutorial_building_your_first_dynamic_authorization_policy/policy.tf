@@ -10,62 +10,62 @@ resource "pingone_authorize_policy_management_policy" "payment_checks" {
   }
 
   // TODO: Rules open issue
-  #   children = [
-  #     {
-  #       name = "Permit payments up to 10000 USD"
-  #       type = "RULE"
+  children = [
+    {
+      name = "Permit payments up to 10000 USD"
+      type = "RULE"
 
-  #       enabled = true
+      enabled = true
 
-  #       condition = {
-  #         type = "AND"
-  #         conditions = [
-  #           {
-  #             type = "COMPARISON",
-  #             left = {
-  #               type = "ATTRIBUTE",
-  #               id   = pingone_authorize_trust_framework_attribute.amount.id
-  #             },
-  #             comparator = "LESS_THAN",
-  #             right = {
-  #               type  = "CONSTANT",
-  #               value = "10000"
-  #             }
-  #           }
-  #         ]
-  #       }
+      condition = {
+        type = "AND"
+        conditions = [
+          {
+            type = "COMPARISON",
+            left = {
+              type = "ATTRIBUTE",
+              id   = pingone_authorize_trust_framework_attribute.amount.id
+            },
+            comparator = "LESSER_THAN",
+            right = {
+              type  = "CONSTANT",
+              value = "10000"
+            }
+          }
+        ]
+      }
 
-  #       effectSettings = {
-  #         type = "UNCONDITIONAL_PERMIT"
-  #       }
-  #     },
-  #     {
-  #       name = "Deny payments over 10000 USD"
-  #       type = "RULE"
+      effect_settings = {
+        type = "UNCONDITIONAL_PERMIT"
+      }
+    },
+    {
+      name = "Deny payments over 10000 USD"
+      type = "RULE"
 
-  #       enabled = true
+      enabled = true
 
-  #       condition = {
-  #         type = "AND"
-  #         conditions = [
-  #           {
-  #             type = "COMPARISON",
-  #             left = {
-  #               type = "ATTRIBUTE",
-  #               id   = pingone_authorize_trust_framework_attribute.amount.id
-  #             },
-  #             comparator = "GREATER_THAN",
-  #             right = {
-  #               type  = "CONSTANT",
-  #               value = "10000"
-  #             }
-  #           }
-  #         ]
-  #       }
+      condition = {
+        type = "AND"
+        conditions = [
+          {
+            type = "COMPARISON",
+            left = {
+              type = "ATTRIBUTE",
+              id   = pingone_authorize_trust_framework_attribute.amount.id
+            },
+            comparator = "GREATER_THAN",
+            right = {
+              type  = "CONSTANT",
+              value = "10000"
+            }
+          }
+        ]
+      }
 
-  #       effectSettings = {
-  #         type = "UNCONDITIONAL_DENY"
-  #       }
-  #     },
-  #   ]
+      effect_settings = {
+        type = "UNCONDITIONAL_DENY"
+      }
+    },
+  ]
 }
