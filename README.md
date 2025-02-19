@@ -11,6 +11,13 @@ Install Terraform on your machine, following the instructions [here](https://dev
 
 If not done so already, first configure your PingOne organization for Terraform access by following the instructions at the [PingOne Terraform provider Getting Started Guide](https://pingidentity.github.io/terraform-docs/getting-started/pingone/#configure-pingone-for-terraform-access).
 
+## Environment Setup
+
+- Create a new PingOne environment with the following services enabled:
+  - PingOne Authorize
+  - PingOne Protect
+- Request the appropriate feature flag to enable the Authorize Editor API
+
 ## Setting up the Project
 
 ### Variables
